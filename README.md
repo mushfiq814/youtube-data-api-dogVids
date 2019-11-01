@@ -1,4 +1,11 @@
+Note: Project Files are located in `src` directory.
+
 # YoutubeApi
+
+Search dog related youtube videos from the convenience of this single page application created in Angular8!
+
+
+# Angular Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
