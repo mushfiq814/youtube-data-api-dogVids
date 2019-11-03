@@ -4,6 +4,10 @@ Note: Project Files are located in `src` directory.
 
 Search dog related youtube videos from the convenience of this single page application created in Angular8!
 
+# TypeScript interface creation
+
+I am using [json2ts](http://www.json2ts.com/) to generate TypeScript models from json returned api responses. Try it! It's great!
+
 
 # Angular Notes
 
