@@ -9,8 +9,6 @@ import { Video } from 'src/app/models/Video';
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent implements OnInit {
-  // apiKey:string = environment.apiKey;
-
   videos:Video[]
 
   // initialize services here
