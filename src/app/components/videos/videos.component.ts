@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+// import { environment } from 'src/environments/environment';
 import { VideoService } from 'src/app/services/video.service';
 import { Video } from 'src/app/models/Video';
 
