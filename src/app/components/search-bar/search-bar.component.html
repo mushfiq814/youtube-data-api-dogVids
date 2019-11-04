@@ -1,0 +1,6 @@
+<form class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="search something..." name="searchQuery" [(ngModel)]="searchQuery" (keyup.enter)="onSubmit()">
+  <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="onSubmit()">search</button>
+  </div>
+</form>

@@ -10,12 +10,19 @@ import { Video } from 'src/app/models/Video';
 })
 export class VideosComponent implements OnInit {
   videos:Video[]
+  searchQuery:string;
 
   // initialize services here
   constructor(private videoService:VideoService) { }
 
   ngOnInit() {
-    this.videoService.getVideos().subscribe(res => {
+    
+  }
+
+  onSearch(query:string) {
+    console.log('getting videos for ' + query)
+    this.searchQuery = query;
+    this.videoService.getVideos(this.searchQuery).subscribe(res => {
       this.videos = res.items;
     });
   }
