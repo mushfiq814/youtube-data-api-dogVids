@@ -4,6 +4,22 @@ Note: Project Files are located in `src` directory.
 
 Search dog related youtube videos from the convenience of this single page application created in Angular8!
 
+## Getting Started
+
+Run `npm install` to install dependencies. nodeJS required.
+
+## API KEY
+
+The application needs a YouTube API Key to run. The application will look for the following environment information in `src/environment.ts`. Create the file and update the info as follows. 
+
+```javascript
+export const environment = {
+  production: false,
+  youTubeUrl: 'https://www.googleapis.com/youtube/v3',
+  apiKey: 'YOUR_API_KEY',
+};
+```
+
 # TypeScript interface creation
 
 I am using [json2ts](http://www.json2ts.com/) to generate TypeScript models from json returned api responses. Try it! It's great!

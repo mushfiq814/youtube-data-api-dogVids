@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
+  // search query event emitter
   @Output() transferSearch:EventEmitter<string> = new EventEmitter;
 
   searchQuery:string;
@@ -15,6 +16,7 @@ export class SearchBarComponent implements OnInit {
   ngOnInit() {
   }
 
+  // send search query to Videos component
   onSubmit():void {
     console.log("emitting searchQuery: " + this.searchQuery);
     this.transferSearch.emit(this.searchQuery)

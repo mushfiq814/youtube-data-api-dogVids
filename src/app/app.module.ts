@@ -9,13 +9,15 @@ import { VideoComponent } from './components/video/video.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { VideoPlayerComponent } from './components/video-player/video-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideosComponent,
     VideoComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,

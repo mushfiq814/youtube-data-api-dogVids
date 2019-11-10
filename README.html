@@ -24,6 +24,16 @@
         <p>Note: Project Files are located in <code>src</code> directory.</p>
 <h1 id="youtubeapi">YoutubeApi</h1>
 <p>Search dog related youtube videos from the convenience of this single page application created in Angular8!</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Run <code>npm install</code> to install dependencies. nodeJS required.</p>
+<h2 id="api-key">API KEY</h2>
+<p>The application needs a YouTube API Key to run. The application will look for the following environment information in <code>src/environment.ts</code>. Create the file and update the info as follows.</p>
+<pre><code class="language-javascript"><div><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> environment = {
+  <span class="hljs-attr">production</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">youTubeUrl</span>: <span class="hljs-string">'https://www.googleapis.com/youtube/v3'</span>,
+  <span class="hljs-attr">apiKey</span>: <span class="hljs-string">'YOUR_API_KEY'</span>,
+};
+</div></code></pre>
 <h1 id="typescript-interface-creation">TypeScript interface creation</h1>
 <p>I am using <a href="http://www.json2ts.com/">json2ts</a> to generate TypeScript models from json returned api responses. Try it! It's great!</p>
 <h1 id="angular-notes">Angular Notes</h1>
