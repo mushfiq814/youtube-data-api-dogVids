@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Video } from 'src/app/models/Video';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./video-player.component.css']
 })
 export class VideoPlayerComponent implements OnInit {
-  
+
 
   constructor(private route:ActivatedRoute) { }
 

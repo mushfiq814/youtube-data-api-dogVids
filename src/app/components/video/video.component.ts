@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Video } from 'src/app/models/Video';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video',
@@ -10,10 +11,16 @@ export class VideoComponent implements OnInit {
   // passed in Video from VideosComponent
   @Input() video: Video;
   
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
     
   }
+
+  clickHandler() {
+    // open component in new tab
+    window.open(`/video/${this.video.id.videoId}`);
+  }
+
 
 }

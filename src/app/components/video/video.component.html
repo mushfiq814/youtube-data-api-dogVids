@@ -1,5 +1,5 @@
-<a [routerLink]="['video', video.id.videoId]" target="_blank" class="btn">
-  <div class="card mt-5 mb-5" style="width:18rem;cursor:pointer;">
+<!-- <a [routerLink]="['video', video.id.videoId]" target="_blank" class="btn"> -->
+  <div (click)="clickHandler()" class="card mt-5 mb-5" style="width:18rem;cursor:pointer;">
     <img src="{{video.snippet.thumbnails.medium.url}}" class="card-img-top">
     <div class="card-body">
       <h3 class="card-title">{{video.snippet.title}}</h3>
@@ -7,4 +7,4 @@
       <p class="card-text">{{video.id.videoId}}</p>
     </div>
   </div>
-</a>
+<!-- </a> -->
