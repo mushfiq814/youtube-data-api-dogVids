@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from 'selenium-webdriver/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 import { AppComponent } from './app.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VideoComponent } from './components/video/video.component';
-import { HttpClient } from 'selenium-webdriver/http';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
-import { FormsModule } from '@angular/forms';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

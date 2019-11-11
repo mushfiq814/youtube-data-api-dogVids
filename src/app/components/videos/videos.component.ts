@@ -23,6 +23,11 @@ export class VideosComponent implements OnInit {
     });
   }
 
+  onScroll() {
+    console.log('scrolled...');
+  }
+  
+
   loadMoreVideos() {
     console.log('loading more videos for: dog ' + this.searchQuery);
     this.videoService.getNextPage(this.searchQuery, this.nextPageToken).subscribe(res => {

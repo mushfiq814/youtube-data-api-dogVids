@@ -1,4 +1,4 @@
-<div>
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="loadMoreVideos()">
   <app-search-bar (transferSearch)="onSearch($event)"></app-search-bar>
   <div class="card-deck" style="justify-content: center;">
     <app-video *ngFor="let video of videos" [video]="video"></app-video>
