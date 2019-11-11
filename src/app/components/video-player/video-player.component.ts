@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Video } from 'src/app/models/Video';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-video-player',
@@ -7,9 +8,12 @@ import { Video } from 'src/app/models/Video';
   styleUrls: ['./video-player.component.css']
 })
 export class VideoPlayerComponent implements OnInit {
-  constructor() { }
+  
+
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => console.log(params.get('videoId')));
   }
 
 }
