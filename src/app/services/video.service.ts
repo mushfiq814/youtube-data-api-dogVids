@@ -24,4 +24,9 @@ export class VideoService {
   getVideos(searchQuery:string):Observable<SearchResponse> {
     return this.http.get<SearchResponse>(this.url + "/search?q=" + searchQuery + this.params);
   }
+
+  getNextPage(searchQuery:string, nextPageToken:string):Observable<SearchResponse> {
+    if (searchQuery == undefined) searchQuery = 'dog'; // on default loading of dog videos when no search query is passed
+    return this.http.get<SearchResponse>(this.url + "/search?q=" + searchQuery + this.params + `&pageToken=${nextPageToken}`);
+  }
 }

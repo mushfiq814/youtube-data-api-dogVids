@@ -3,4 +3,5 @@
   <div class="card-deck" style="justify-content: center;">
     <app-video *ngFor="let video of videos" [video]="video"></app-video>
   </div>
+  <button (click)="loadMoreVideos()">LOAD MORE</button>
 </div>
