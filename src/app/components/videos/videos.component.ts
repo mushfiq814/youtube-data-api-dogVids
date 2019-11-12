@@ -21,22 +21,18 @@ export class VideosComponent implements OnInit {
       this.videos = res.items;
       this.nextPageToken = res.nextPageToken;
     });
-  }
-
-  onScroll() {
-    console.log('scrolled...');
-  }
-  
+  }  
 
   loadMoreVideos() {
     console.log('loading more videos for: dog ' + this.searchQuery);
     this.videoService.getNextPage(this.searchQuery, this.nextPageToken).subscribe(res => {
       res.items.forEach(video => this.videos.push(video)); // TODO: implement BehaviourSubject
-      this.videos.concat(res.items);      
+      this.videos.concat(res.items);   
       this.nextPageToken = res.nextPageToken;
     })
   }
 
+  // query api with search string
   onSearch(query:string) {
     console.log('getting videos for: dog ' + query)
     this.searchQuery = query;
