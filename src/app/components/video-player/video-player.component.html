@@ -1,7 +1,13 @@
-<div class="card">
-  <img class="card-img-top" src="{{video.snippet.thumbnails.high.url}}">
-  <div class="card-body">
-    <h1 class="card-title">{{video.snippet.title}}</h1>
-    <p class="card-text">{{video.snippet.channelTitle}}</p>
+<div class="">
+  <div *ngIf="!video" class="">
+    loading...
   </div>
+  <div *ngIf="video" class="card">
+    <div id="player" class="card-img-top"></div> <!-- YT iframe player -->
+    <div class="card-body">
+      <h1 class="card-title">{{video.snippet.title}}</h1>
+      <p class="card-text">{{video.snippet.channelTitle}}</p>
+    </div>
+  </div>
+
 </div>

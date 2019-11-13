@@ -17,10 +17,29 @@ export class VideoPlayerComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.videoId = params.get('videoId');
-      console.log('video ID: ' + this.videoId);
       this._getVideoService.getVideo(this.videoId).subscribe(res => this.video = res.items[0]);
-      // console.log('video title: ' + this.video.snippet.title);
     });
+
+    this.loadYTIframe();
   }
 
+  loadYTIframe() {
+    // This code loads the IFrame Player API code asynchronously.
+    let tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // This function creates an <iframe> (and YouTube player) after the API code downloads.
+    window['onYouTubeIframeAPIReady'] = () => {
+      new window['YT'].Player('player', {
+        videoId: this.videoId,
+        playerVars: {
+          rel: 0,
+          color: 'white',
+        },
+        events: { 'onReady': (event) => event.target.playVideo() }
+      });
+    }
+  }
 }
