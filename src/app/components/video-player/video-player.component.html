@@ -1,5 +1,7 @@
-<div class="">
-  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).jpg">
-  <!-- <h1>{{video.snippet.title}}</h1>
-  <h4>{{video.snippet.description}}</h4> -->
+<div class="card">
+  <img class="card-img-top" src="{{video.snippet.thumbnails.high.url}}">
+  <div class="card-body">
+    <h1 class="card-title">{{video.snippet.title}}</h1>
+    <p class="card-text">{{video.snippet.channelTitle}}</p>
+  </div>
 </div>

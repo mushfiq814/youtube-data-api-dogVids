@@ -13,9 +13,7 @@ export class VideoComponent implements OnInit {
   
   constructor(private router:Router) { }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
   clickHandler() {
     // open component in new tab
