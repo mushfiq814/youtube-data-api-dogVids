@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Video } from 'src/app/models/Video';
-import { Router } from '@angular/router';
+import { SendVideoService } from 'src/app/services/send.video.service';
 
 @Component({
   selector: 'app-video',
@@ -11,15 +11,17 @@ export class VideoComponent implements OnInit {
   // passed in Video from VideosComponent
   @Input() video: Video;
   
-  constructor(private router:Router) { }
+  constructor(private _sendVideoService:SendVideoService) { }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 
-  clickHandler() {
+  selectVideo() {
     // open component in new tab
     window.open(`/video/${this.video.id.videoId}`);
+    
+    // send video as observable
+    this._sendVideoService.sendVideo(this.video);
+    console.log("Video Sent!")
   }
 
 

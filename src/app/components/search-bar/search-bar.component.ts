@@ -13,9 +13,8 @@ export class SearchBarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
+  
   // send search query to Videos component
   onSubmit():void {
     console.log("emitting searchQuery: " + this.searchQuery);
