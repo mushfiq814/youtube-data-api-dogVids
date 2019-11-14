@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { GetVideoService } from 'src/app/services/video/get-video.service';
+import { Router } from '@angular/router';
 import { Video } from 'src/app/models/Video';
 
 @Component({
@@ -12,15 +11,13 @@ export class VideoPlayerComponent implements OnInit {
   videoId:string;
   video:Video;
 
-  constructor(private route:ActivatedRoute, private _getVideoService:GetVideoService) { }
+  constructor(private router:Router) {
+    this.router.getCurrentNavigation().extras.state; // save passed in state to history
+   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.videoId = params.get('videoId');
-      this._getVideoService.getVideo(this.videoId).subscribe(res => this.video = res.items[0]);
-    });
-
-    this.loadYTIframe();
+    this.video = history.state; // set video
+    this.loadYTIframe(); // load iframe
   }
 
   loadYTIframe() {
@@ -33,7 +30,7 @@ export class VideoPlayerComponent implements OnInit {
     // This function creates an <iframe> (and YouTube player) after the API code downloads.
     window['onYouTubeIframeAPIReady'] = () => {
       new window['YT'].Player('player', {
-        videoId: this.videoId,
+        videoId: this.video.id.videoId,
         playerVars: {
           rel: 0,
           color: 'white',

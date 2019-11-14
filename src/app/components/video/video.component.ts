@@ -19,9 +19,9 @@ export class VideoComponent implements OnInit {
     this.video.snippet.title = cleanTitle;
   }
 
-  clickHandler() {
-    // open component in new tab
-    window.open(`/video/${this.video.id.videoId}`);
+  selectVideo() {
+    // navigate to video component
+    this.router.navigateByUrl('video', {state:this.video});
   }
 
 
