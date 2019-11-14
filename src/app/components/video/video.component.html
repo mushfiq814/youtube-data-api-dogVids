@@ -1,10 +1,10 @@
-<!-- <a [routerLink]="['video', video.id.videoId]" target="_blank" class="btn"> -->
-  <div (click)="clickHandler()" class="card mt-5 mb-5" style="width:18rem;cursor:pointer;">
-    <img src="{{video.snippet.thumbnails.medium.url}}" class="card-img-top">
-    <div class="card-body">
-      <h3 class="card-title">{{video.snippet.title}}</h3>
-      <p class="card-text">{{video.snippet.description}}</p>
-      <p class="card-text">{{video.id.videoId}}</p>
-    </div>
+<div (click)="clickHandler()" class="card mr-0 ml-0" style="cursor:pointer;">
+  <div class="clip-img">
+    <img src="{{video.snippet.thumbnails.medium.url}}" class="card-img-top dark-tint">
   </div>
-<!-- </a> -->
+  <div class="card-img-overlay">
+    <p class="card-title-dark text-light">{{video.snippet.title}}</p>
+    <!-- <p class="card-text">{{video.snippet.description}}</p> -->
+    <!-- <p class="card-text">{{video.id.videoId}}</p> -->
+  </div>
+</div>

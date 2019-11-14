@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class SearchVideosService {
   url:string = environment.youTubeUrl;
   apiKey:string = environment.apiKey;
-  maxResults:string = '10';
+  maxResults:string = '20';
 
   params:string = `&maxResults=${this.maxResults}&part=snippet&type=video&key=${this.apiKey}`
   

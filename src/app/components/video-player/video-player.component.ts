@@ -38,7 +38,9 @@ export class VideoPlayerComponent implements OnInit {
           rel: 0,
           color: 'white',
         },
-        events: { 'onReady': (event) => event.target.playVideo() }
+        events: { 
+          'onReady': (event) => event.target.playVideo()
+        }
       });
     }
   }

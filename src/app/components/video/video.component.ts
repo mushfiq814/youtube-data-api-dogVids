@@ -13,7 +13,11 @@ export class VideoComponent implements OnInit {
   
   constructor(private router:Router) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    let dirtyTitle = this.video.snippet.title;
+    let cleanTitle = dirtyTitle.replace(/&#(\d+);/g, (match, dec) => String.fromCharCode(dec)).replace(/&amp;/g,'&').replace(/&quot;/g,'"');                               
+    this.video.snippet.title = cleanTitle;
+  }
 
   clickHandler() {
     // open component in new tab
