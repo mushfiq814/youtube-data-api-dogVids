@@ -10,7 +10,7 @@ Run `npm install` to install dependencies. nodeJS required.
 
 ## API KEY
 
-The application needs a YouTube API Key to run. The application will look for the following environment information in `src/environment.ts`. Create the file and update the info as follows. Check `src/environments/environment.example.ts` for a sample.
+The application needs a YouTube API Key to run. The application will look for the following environment information in `src/environments/environment.ts`. Create the file and update the info as follows. Check `src/environments/environment.example.ts` for a sample.
 
 ```javascript
 export const environment = {
