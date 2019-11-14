@@ -16,7 +16,7 @@ export class VideoPlayerComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.video = history.state; // set video
+    this.video = history.state; // get video from history
     this.loadYTIframe(); // load iframe
   }
 

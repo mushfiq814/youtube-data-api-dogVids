@@ -24,9 +24,9 @@ export class VideosComponent implements OnInit {
   }  
 
   loadMoreVideos() {
-    console.log('loading more videos for: dog ' + this.searchQuery);
+    console.log('loading more videos for: ' + this.searchQuery);
     this._searchVideoService.getNextPage(this.searchQuery, this.nextPageToken).subscribe(res => {
-      res.items.forEach(video => this.videos.push(video)); // TODO: implement BehaviourSubject
+      res.items.forEach(video => this.videos.push(video));
       this.videos.concat(res.items);   
       this.nextPageToken = res.nextPageToken;
     })
@@ -35,7 +35,7 @@ export class VideosComponent implements OnInit {
   // query api with search string
   onSearch(query:string) {
     console.log('getting videos for: dog ' + query)
-    this.searchQuery = query;
+    this.searchQuery = 'dog ' + query;
     this._searchVideoService.getVideos('dog ' + this.searchQuery).subscribe(res => {
       this.videos = res.items;
       this.nextPageToken = res.nextPageToken;

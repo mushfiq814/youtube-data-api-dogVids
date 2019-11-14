@@ -10,9 +10,9 @@ import { environment } from 'src/environments/environment';
 export class SearchVideosService {
   url:string = environment.youTubeUrl;
   apiKey:string = environment.apiKey;
-  maxResults:string = '20';
+  maxResults:string = '40';
 
-  params:string = `&maxResults=${this.maxResults}&part=snippet&type=video&key=${this.apiKey}`
+  params:string = `&maxResults=${this.maxResults}&part=snippet&type=video&key=${this.apiKey}`;  
   
   // initialize the http module as private
   constructor(private http:HttpClient) { }

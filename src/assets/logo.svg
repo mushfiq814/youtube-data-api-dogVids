@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5837"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs5831" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-67.142857"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5834">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g5768"
+       transform="matrix(2.3535025,1.3587952,-1.3587952,2.3535025,67.789337,-69.223849)"
+       style="stroke-width:0.367973">
+      <path
+         style="fill:#000000;stroke-width:0.367973"
+         d="m 45.994703,81.880813 c -0.660876,3.522305 3.573163,17.942532 11.470618,17.686262 7.897457,-0.25627 11.059404,-6.69501 17.893484,-6.2699 6.83409,0.42511 10.85215,5.54972 17.89348,6.2699 7.041325,0.720175 12.156795,-12.35772 11.470615,-17.686259 -0.68618,-5.328538 -7.703005,-2.438547 -6.892605,0.594805 0.81041,3.033347 2.668755,7.695374 -4.24935,9.610264 -6.91811,1.91489 -10.70304,-7.300977 -18.22214,-7.415567 -7.5191,-0.11459 -12.385888,9.275217 -18.222143,7.415567 -5.836255,-1.85965 -4.008141,-4.69545 -4.249358,-9.610274 -0.241213,-4.914814 -6.231725,-4.117105 -6.892601,-0.594798 z"
+         id="path5760"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="zzzzzzzzzzz" />
+      <path
+         style="fill:#000000;stroke-width:0.367973"
+         d="m 72.580095,54.391971 c -5.03303,-6e-6 -10.710021,1.557537 -14.026535,4.596611 -3.316512,3.039071 -3.687135,7.951738 -1.135844,11.547609 2.551283,3.595878 12.724379,8.699884 15.109679,8.474425 2.38528,-0.225453 0.0342,-0.0074 0.0527,-0.0072 0.0184,1.52e-4 -2.33261,-0.218412 0.0528,0.0072 2.38531,0.225657 12.55838,-4.878536 15.10967,-8.474409 2.55129,-3.595878 2.18067,-8.508545 -1.13585,-11.547615 -3.31651,-3.039081 -8.99352,-4.596619 -14.02654,-4.596619 z"
+         id="path5762"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="zzzzzzzzz" />
+      <path
+         style="fill:#000000;stroke-width:0.367973"
+         d="M 40.942262,77.477418 C 23.684004,77.839278 2.4180317,59.437481 5.2308447,50.365231 10.384847,35.967756 26.203342,14.080381 32.794304,11.849033 39.385269,9.6176847 49.92257,8.4406007 65.965005,12.218948 c -0.941628,3.998067 -1.108997,4.814598 -2.164056,9.294264 -6.668637,-0.856902 -21.055787,-2.173889 -24.605784,-3.11102 -2.155672,6.569982 -2.075788,10.725302 -2.701016,16.624549 -0.956275,7.670089 4.250917,17.390528 6.313268,22.119005 2.062353,4.728474 5.056788,8.023953 5.284203,11.726874 0.227415,3.702923 -2.018716,7.261299 -7.149361,8.604797 z"
+         id="path5764"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cczcccczzc" />
+      <circle
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.07359461;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+         id="circle5766"
+         cx="24.500071"
+         cy="60.964928"
+         r="7.6839986"
+         transform="rotate(-30)" />
+    </g>
+  </g>
+</svg>
