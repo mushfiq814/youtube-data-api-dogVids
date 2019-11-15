@@ -21,7 +21,7 @@ export class VideosComponent implements OnInit {
       this.videos = res.items;
       this.nextPageToken = res.nextPageToken;
     });
-  }  
+  }
 
   loadMoreVideos() {
     console.log('loading more videos for: ' + this.searchQuery);

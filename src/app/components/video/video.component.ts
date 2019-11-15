@@ -21,7 +21,7 @@ export class VideoComponent implements OnInit {
 
   selectVideo() {
     // navigate to video component
-    this.router.navigateByUrl('video', {state:this.video});
+    this.router.navigateByUrl(`video/${this.video.id.videoId}`, {state:this.video});
   }
 
 
