@@ -4,10 +4,6 @@ Note: Project Files are located in `src` directory.
 
 Search dog related youtube videos from the convenience of this single page application created in Angular8!
 
-# Screenshots
-
-<img src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png" alt="screenshot of app">
-
 ## Getting Started
 
 Run `npm install` to install dependencies. nodeJS required.
@@ -30,7 +26,6 @@ export const environment = {
 
 I am using [json2ts](http://www.json2ts.com/) to generate TypeScript models from json returned api responses. Try it! It's great!
 
-
 # Angular Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
@@ -46,6 +41,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+# Screenshots
+
+<div style="display:grid">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png?raw=true" alt="screenshot of app">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-wide.png?raw=true" alt="screenshot of app">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/search-video-narrow.png?raw=true" alt="screenshot of app">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-narrow.png?raw=true" alt="screenshot of app">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/loading.png?raw=true" alt="screenshot of app">
+</div>
 
 ## Further help
 
