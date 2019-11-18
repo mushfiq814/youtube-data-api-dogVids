@@ -23,7 +23,7 @@ export class VideoPlayerComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.videoId = params.get('videoId');
-      this.sanitizedUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoId}`)
+      this.sanitizedUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoId}`) // sanitize URL
     }); // get passed in videoId
     this.video = history.state; // get video from history
     this.channelService.getChannel(this.video.snippet.channelId).subscribe(channel => this.channel = channel.items[0]); // get channel details
