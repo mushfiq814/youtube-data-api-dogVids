@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Video } from 'src/app/models/Video';
 import { Channel } from 'src/app/models/Channel';
 import { ChannelService } from 'src/app/services/channel/channel.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-video-player',
@@ -11,23 +12,37 @@ import { ChannelService } from 'src/app/services/channel/channel.service';
 })
 export class VideoPlayerComponent implements OnInit { 
   videoId:string;
+  sanitizedUrl:SafeResourceUrl;
   video:Video;
   channel:Channel;
 
-  constructor(private router:Router, private route:ActivatedRoute, private channelService:ChannelService) {
+  constructor(private router:Router, private route:ActivatedRoute, private channelService:ChannelService, private domSanitizer:DomSanitizer) {
     this.router.getCurrentNavigation().extras.state; // save passed in state to history
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => this.videoId = params.get('videoId')); // get passed in videoId
+    this.route.paramMap.subscribe(params => {
+      this.videoId = params.get('videoId');
+      this.sanitizedUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${this.videoId}`)
+    }); // get passed in videoId
     this.video = history.state; // get video from history
     this.channelService.getChannel(this.video.snippet.channelId).subscribe(channel => this.channel = channel.items[0]); // get channel details
-    this.loadYTIframe(); // load iframe
+    // this.loadYTIframe(); // load iframe
   }
 
   loadYTIframe() {
+    // dispose of previously created iframe
+    let oldIframe = document.getElementsByClassName('ytIframe');
+
+    if (oldIframe.length > 0) {
+      if (oldIframe != undefined || oldIframe != null || oldIframe[0].parentNode != undefined ) {
+        oldIframe[0].parentNode.removeChild(oldIframe[0]);
+      }
+    }
+
     // This code loads the IFrame Player API code asynchronously.
     let tag = document.createElement('script');
+    tag.classList.add('ytIframe');
     tag.src = 'https://www.youtube.com/iframe_api';
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);

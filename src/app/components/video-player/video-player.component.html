@@ -3,7 +3,8 @@
     loading...
   </div>
   <div *ngIf="video!=undefined && channel!=undefined" class="card">
-    <div id="player" class="card-img-top"></div> <!-- YT iframe player -->
+    <!-- <div id="player" class="card-img-top"></div> YT iframe player -->
+    <iframe [src]="sanitizedUrl" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen style="height:50vh;"></iframe>
     <div class="card-body">
       <div class="row">
         <img class="align-self-center mr-3 channel-thumb" src="{{channel.snippet.thumbnails.default.url}}">
