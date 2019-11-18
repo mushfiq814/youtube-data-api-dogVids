@@ -45,11 +45,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 # Screenshots
 
 <div style="display:grid">
-  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png?raw=true" alt="screenshot of app">
-  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-wide.png?raw=true" alt="screenshot of app">
-  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/search-video-narrow.png?raw=true" alt="screenshot of app">
-  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-narrow.png?raw=true" alt="screenshot of app">
-  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/loading.png?raw=true" alt="screenshot of app">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png?raw=true" alt="Main Page">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-wide.png?raw=true" alt="Video Page">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/search-video-narrow.png?raw=true" alt="Searching Videos">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-narrow.png?raw=true" alt="Video page in smaller Window">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/loading.png?raw=true" alt="Loading more Videos">
 </div>
 
 ## Further help
