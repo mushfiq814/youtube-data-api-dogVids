@@ -4,6 +4,10 @@ Note: Project Files are located in `src` directory.
 
 Search dog related youtube videos from the convenience of this single page application created in Angular8!
 
+# Screenshots
+
+<img src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png" alt="screenshot of app">
+
 ## Getting Started
 
 Run `npm install` to install dependencies. nodeJS required.
