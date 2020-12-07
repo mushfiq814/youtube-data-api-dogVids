@@ -7,16 +7,12 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class VideoService {
+export class SearchVideosService {
   url:string = environment.youTubeUrl;
-  // query:string = 'dog';
-  maxResults:string = '10';
-  searchEndpoint:string = 'search';
-  type:string ='video';
-  part:string = 'snippet';
   apiKey:string = environment.apiKey;
+  maxResults:string = '40';
 
-  params:string = `&maxResults=${this.maxResults}&part=${this.part}&type=${this.type}&key=${this.apiKey}`
+  params:string = `&maxResults=${this.maxResults}&part=snippet&type=video&key=${this.apiKey}`;  
   
   // initialize the http module as private
   constructor(private http:HttpClient) { }

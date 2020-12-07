@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from 'src/app/services/video.service';
+import { SearchVideosService } from 'src/app/services/search/search-videos.service';
 import { Video } from 'src/app/models/Video';
 
 @Component({
@@ -13,20 +13,20 @@ export class VideosComponent implements OnInit {
   nextPageToken:string = '';
 
   // initialize services here
-  constructor(private videoService:VideoService) { }
+  constructor(private _searchVideoService:SearchVideosService) { }
 
   // query api for dog videos by default
   ngOnInit() {
-    this.videoService.getVideos('dog').subscribe(res => {
+    this._searchVideoService.getVideos('dog').subscribe(res => {
       this.videos = res.items;
       this.nextPageToken = res.nextPageToken;
     });
-  }  
+  }
 
   loadMoreVideos() {
-    console.log('loading more videos for: dog ' + this.searchQuery);
-    this.videoService.getNextPage(this.searchQuery, this.nextPageToken).subscribe(res => {
-      res.items.forEach(video => this.videos.push(video)); // TODO: implement BehaviourSubject
+    console.log('loading more videos for: ' + this.searchQuery);
+    this._searchVideoService.getNextPage(this.searchQuery, this.nextPageToken).subscribe(res => {
+      res.items.forEach(video => this.videos.push(video));
       this.videos.concat(res.items);   
       this.nextPageToken = res.nextPageToken;
     })
@@ -35,8 +35,8 @@ export class VideosComponent implements OnInit {
   // query api with search string
   onSearch(query:string) {
     console.log('getting videos for: dog ' + query)
-    this.searchQuery = query;
-    this.videoService.getVideos('dog ' + this.searchQuery).subscribe(res => {
+    this.searchQuery = 'dog ' + query;
+    this._searchVideoService.getVideos('dog ' + this.searchQuery).subscribe(res => {
       this.videos = res.items;
       this.nextPageToken = res.nextPageToken;
     });

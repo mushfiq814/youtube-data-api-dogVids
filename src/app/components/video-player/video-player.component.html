@@ -1,5 +1,20 @@
 <div class="">
-  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(131).jpg">
-  <!-- <h1>{{video.snippet.title}}</h1>
-  <h4>{{video.snippet.description}}</h4> -->
+  <div *ngIf="!video" class="">
+    loading...
+  </div>
+  <div *ngIf="video!=undefined && channel!=undefined" class="card">
+    <!-- <div id="player" class="card-img-top"></div> YT iframe player -->
+    <iframe [src]="sanitizedUrl" frameborder="0" allow="autoplay;picture-in-picture" allowfullscreen style="height:50vh;"></iframe>
+    <div class="card-body">
+      <div class="row">
+        <img class="align-self-center mr-3 channel-thumb" src="{{channel.snippet.thumbnails.default.url}}">
+        <div class="media-body">
+          <h1 class="card-title">{{video.snippet.title}}</h1>
+          <p class="card-text">{{video.snippet.channelTitle}}</p>
+          <p class="card-text">{{video.snippet.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

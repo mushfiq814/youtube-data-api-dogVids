@@ -10,7 +10,9 @@ Run `npm install` to install dependencies. nodeJS required.
 
 ## API KEY
 
-The application needs a YouTube API Key to run. The application will look for the following environment information in `src/environment.ts`. Create the file and update the info as follows. Check `src/environments/environment.example.ts` for a sample.
+The application needs a YouTube API Key to run. The application will look for the following environment information in `src/environments/environment.ts`. Create the file and update the info as follows. 
+
+Check `src/environments/environment.example.ts` for a sample.
 
 ```javascript
 export const environment = {
@@ -23,7 +25,6 @@ export const environment = {
 # TypeScript interface creation
 
 I am using [json2ts](http://www.json2ts.com/) to generate TypeScript models from json returned api responses. Try it! It's great!
-
 
 # Angular Notes
 
@@ -40,6 +41,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+# Screenshots
+
+<div style="display:grid">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/main-wide.png?raw=true" alt="Main Page">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-wide.png?raw=true" alt="Video Page">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/search-video-narrow.png?raw=true" alt="Searching Videos">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/video-narrow.png?raw=true" alt="Video page in smaller Window">
+  <img style="grid-template-columns: 1fr 1fr 1fr;" src="https://raw.githubusercontent.com/mushfiq814/youtube-data-api-dogVids/master/src/assets/screens/loading.png?raw=true" alt="Loading more Videos">
+</div>
 
 ## Further help
 
